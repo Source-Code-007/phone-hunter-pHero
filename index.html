@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API with JSON format</title>
+    <!-- Daisy UI and Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="./images/navbarUser.png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="banner min-h-screen space-y-5 max-w-7xl mx-auto py-14">
+            <h2 class="text-3xl font-bold text-center">Welcome To Phone Hunter</h2>
+            <div class="phone-container space-y-5">
+
+                <!-- input and search button -->
+                <div class="text-center">
+                    <input type="text" placeholder="Search your phone"
+                        class="p-2 border-none focus:outline-none w-3/6 rounded-lg bg-slate-100" id="phone-search-inp">
+                    <button class="rounded-lg px-5 py-3 bg-sky-500" id="phone-search-btn">Search</button>
+                </div>
+
+                <!-- items -->
+                <div class="phone-inner grid grid-cols-3 gap-5">
+                    <!-- Demo card -->
+                    <!-- <div class="card bg-base-100 shadow-xl">
+                       <figure class="w-3/6"><img src="" class="h-full" alt=""/></figure>
+                       <div class="card-body w-3/6">
+                           <h2 class="card-title justify-center">Demo Name</h2>
+                           <p>Demo category</p>
+                           <div class="card-actions justify-center">
+                           </div>
+                       </div>
+                   </div> -->
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal" id="phoneModal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg" id="modal-title">Congratulations random Internet user!</h3>
+                        <p>Phone Name: <span class="phone-name"></span></p>
+                        <p>Brand: <span class="phone-brand"></span></p>
+                        <p>Release-date: <span class="phone-release-date"></span></p>
+                        <div class="modal-action">
+                            <a href="#" class="btn">Yay!</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+
+    <!-- Footer -->
+    <footer class="bg-red-100 py-5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div class="footer-one space-y-4">
+                <h2 class="font-bold text-xl">Section</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-two space-y-4">
+                <h2 class="font-bold text-xl">Section</h2>
+                <ul>
+                    <li><a href="#">UIUX Design</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-three space-y-4">
+                <h2 class="font-bold text-xl">Resource</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                </ul>
+            </div>
+            <div class="footer-four space-y-4">
+                <h2 class="font-bold text-xl">Subscribe to our newsletter</h2>
+                <p>There are many variations of passages of available, but the majority have suffered</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
